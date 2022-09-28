@@ -41,8 +41,25 @@ content {
     position: relative;
 }
 
-canvas {
-    height: auto !important;
+.canvas-wrapper {
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+
+.canvas-wrapper canvas:not(:first-child){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*.canvas-wrapper canvas {*/
+/*    height: auto !important;*/
+/*}*/
+
+#my-botui-app {
+    width: 40%;
+    height: 100%;
 }
 
 .title {
@@ -60,57 +77,3 @@ p {
     margin: 0;
     padding: 0;
 }
-
-.bubble {
-    position: absolute;
-    z-index: 1;
-    top: 30%;
-    left: 70%;
-    border-radius: 5px;
-    padding: 1em;
-    background: #C0C999;
-    color: white;
-}
-
-.bubble:after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 10px;
-    border-width: 10px 10px 0;
-    border-style: solid;
-    border-color: #C0C999 transparent;
-    display: block;
-    width: 0;
-}
-
-.canvas-wrapper {
-    position: relative;
-}
-
-.canvas-wrapper canvas:not(:first-child){
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/*#my-botui-app {*/
-/*    position: fixed;*/
-/*    top: 0;*/
-/*    right: 0;*/
-/*}*/
-
-/*#play_button {*/
-/*    background: none;*/
-/*    border: none;*/
-/*    outline: none;*/
-/*    position: fixed;*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-/*    margin: 1em;*/
-/*}*/
-
-/*#play_button img {*/
-/*    width: 50px;*/
-/*    height: 50px;*/
-/*}*/
