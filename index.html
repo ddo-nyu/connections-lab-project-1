@@ -4,14 +4,46 @@
     <meta charset="UTF-8">
     <title>Dora Do - Project 1</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/botui/build/botui.min.css" />
+<!--    <link rel="stylesheet" href="https://unpkg.com/botui/build/botui-theme-default.css" />-->
+    <link rel="stylesheet" href="botui-theme.css" />
+
 </head>
 <body>
-    <p>+ Drag and drop a file here</p>
-    <button id="play_button">
-        <img src="play.png" alt="play button">
-    </button>
-    <div id="wireframes">
-
+    <div class="container">
+        <header>
+            <p>Petbot</p>
+            <div class="buttons">
+                <button id="BASE">Neutral</button>
+                <button id="HI">Hi</button>
+                <button id="HAPPY">Happy</button>
+            </div>
+        </header>
+        <content>
+            <h1 class="title">Meet Petbot! Start by saying hello.</h1>
+            <div class="canvas-wrapper">
+                <canvas id="canvas3d"></canvas>
+            </div>
+            <div id="my-botui-app">
+                <bot-ui></bot-ui>
+            </div>
+        </content>
     </div>
+
+<script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+<script src="https://unpkg.com/botui/build/botui.min.js"></script>
+<!-- Import maps polyfill -->
+<!-- Remove this when import maps will be widely supported -->
+<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+<script type="importmap">
+      {
+        "imports": {
+          "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@0.9.106/build/runtime.js"
+        }
+      }
+    </script>
+<script type="module" src="main.js"></script>
+
 </body>
 </html>

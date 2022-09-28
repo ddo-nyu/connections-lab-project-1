@@ -1,0 +1,154 @@
+#my-botui-app {
+    margin: 20px;
+}
+
+.botui-container {
+
+}
+
+.botui-messages-container {
+}
+
+.botui-actions-container {
+}
+
+.botui-message {
+
+}
+
+.botui-message-content {
+    position: relative;
+    background: #C0C999;
+    color: white;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+/*.botui-message-content:after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    bottom: -10px;*/
+/*    left: 10px;*/
+/*    border-width: 10px 10px 0;*/
+/*    border-style: solid;*/
+/*    border-color: #C0C999 transparent;*/
+/*    display: block;*/
+/*    width: 0;*/
+/*}*/
+
+.botui-message-content.human {
+    background: #00A3FF;
+}
+
+.botui-message-content.human:after {
+    border-color: #00A3FF transparent;
+    left: unset;
+    right: 10px;
+}
+
+.botui-message-content.text {
+
+}
+
+.botui-message-content.embed {
+
+}
+
+.botui-message-content-link {
+}
+
+.botui-actions-text {
+    position: relative;
+    background: white;
+    padding: 1em;
+    border-radius: 8px;
+    display: inline-block;
+    float: right;
+}
+
+/*.botui-actions-text:after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    bottom: -10px;*/
+/*    right: 10px;*/
+/*    border-width: 10px 10px 0;*/
+/*    border-style: solid;*/
+/*    border-color: white transparent;*/
+/*    display: block;*/
+/*    width: 0;*/
+/*}*/
+
+.botui-actions-text-input {
+    border: none;
+}
+
+.botui-actions-text-input:focus {
+    outline: none;
+}
+
+.botui-actions-text-submit {
+
+}
+
+.botui-actions-buttons {
+    float: right;
+}
+
+.botui-actions-buttons-button {
+    background: #00A3FF;
+    color: white;
+    padding: 1em;
+    border-radius: 8px;
+    border: none;
+}
+
+.slide-fade-enter-active {
+    transition: all .3s ease
+}
+
+.slide-fade-enter, .slide-fade-leave-to {
+    opacity: 0;
+    transform: translateX(-10px)
+}
+
+.dot {
+    width: .5rem;
+    height: .5rem;
+    border-radius: .5rem;
+    display: inline-block;
+    background-color: #919292
+}
+
+.dot:nth-last-child(1) {
+    margin-left: .3rem;
+    animation: loading .6s .3s linear infinite
+}
+
+.dot:nth-last-child(2) {
+    margin-left: .3rem;
+    animation: loading .6s .2s linear infinite
+}
+
+.dot:nth-last-child(3) {
+    animation: loading .6s .1s linear infinite
+}
+
+@keyframes loading {
+    0% {
+        transform: translate(0, 0);
+        background-color: #ababab
+    }
+    25% {
+        transform: translate(0, -3px)
+    }
+    50% {
+        transform: translate(0, 0);
+        background-color: #ababab
+    }
+    75% {
+        transform: translate(0, 3px)
+    }
+    100% {
+        transform: translate(0, 0)
+    }
+}
